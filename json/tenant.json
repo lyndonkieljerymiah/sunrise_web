@@ -1,0 +1,26 @@
+{
+    "tenant": {
+        "type": "in",
+        "code": "123-456",
+        "name": "Arnold Mercado",
+        "emailAddress": "arnold.mercado@gmail.com",
+        "telNo": "123456",
+        "mobileNo": "123456",
+        "address1": "Al Wakrah",
+        "address2": "",
+        "city": "Doha City",
+        "postalCode": "122",
+        "individual": {
+            "gender": "M",
+            "birthday": "08/27/1979",
+            "company": "Nabco"
+        },
+        "company": {
+            "businessType": "",
+            "crNo": "",
+            "validityDate": "",
+            "representative": ""
+        }
+    },
+    "types": [{ "text": "Individual", "key": "in" }, { "text": "Company", "key": "co" }]
+}

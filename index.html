@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Register Form</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/default.css" />
+</head>
+
+<body ng-app="mainApp">
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="container content-body">
+        <form ng-controller="tenantController as $ctrl" class="form-horizontal">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <strong>Register - <span ng-bind="data.type"></span></strong>
+                </div>
+                <div class="panel-body">
+                    <div ng-show="data.step.current==1">
+                        <div class="form-group">
+                            <label class="col-sm-2 text-right">Type:</label>
+                            <div class="col-sm-4">
+                                <!-- selection -->
+                                <select ng-model="data.tenant.type" ng-change="data.typeChange()" class="form-control">
+                                <option ng-repeat="type in data.types" value="{{type.key}}">{{type.text}}</option>
+                            </select>
+                            </div>
+                        </div>
+                        <!-- tenant form -->
+                        <tenantform template="{{data.template}}"></tenantform>
+                        <!-- end tenant form -->
+                    </div>
+                    <!-- choose villa -->
+                    <villa ng-show="data.step.current == 2"></villa>
+                    <!-- end villa -->
+
+                    <div class="pull-right">
+                        <button class="btn btn-default" ng-hide="data.step.current <= 1" ng-click="data.step.stepDown()">Previous</button>
+                        <button class="btn btn-default" ng-click="data.step.stepUp()">Next</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-sanitize.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/angular.moment/1.0.1/angular-moment.min.js"></script>
+    <script src="script/app.js"></script>
+    <script src="script/services/tenantService.js"></script>
+    <script src="script/directives/tenantForm.js"></script>
+    <script src="script/controllers/tenantController.js"></script>
+</body>
+
+</html>

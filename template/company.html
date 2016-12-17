@@ -1,0 +1,57 @@
+<div class="form-group">
+    <label class="col-sm-2 text-right">Tenant Code:</label>
+    <div class="col-sm-4"><input name="code" type="text" class="form-control" ng-model="tenant.code" ng-change="data.tenantCodeChange()" /><span ng-bind="tenant.validationLabel.code">{{tenant.validationLabel.code}}</span></div>
+</div>
+<div class="form-group">
+    <label class="col-sm-2 text-right">Business Name:</label>
+    <div class="col-sm-8"><input name="name" type="text" class="form-control" ng-model="tenant.name" /></div>
+</div>
+<div class="form-group">
+    <label class="col-sm-2 text-right">Business Type:</label>
+    <div class="col-sm-8"><input name="name" type="text" class="form-control" ng-model="tenant.name" /></div>
+</div>
+<div class="form-group">
+    <label class="col-sm-2 text-right">CR No:</label>
+    <div class="col-sm-3"><input name="crNo" type="text" class="form-control" ng-model="tenant.company.crno" /></div>
+    <label class="col-sm-2 text-right">Validity Date:</label>
+    <div class="col-sm-3"><input name="validityDate" type="date" class="form-control" ng-model="tenant.person.validityDate" /></div>
+</div>
+<div class="form-group">
+    <label class="col-sm-2 text-right">Representative:</label>
+    <div class="col-sm-8"><input name="representative" type="text" class="form-control" ng-model="tentant.company.representative" /></div>
+</div>
+
+<div class="page-header">
+    <strong>Contact Details</strong>
+</div>
+<div class="form-group">
+    <label class="col-sm-2 text-right">Email Address:</label>
+    <div class="col-sm-3"><input name="emailAddres" type="email" class="form-control" /></div>
+</div>
+<div class="form-group">
+    <label class="col-sm-2 text-right">Telephone No:</label>
+    <div class="col-sm-3"><input name="telNo" type="text" class="form-control" /></div>
+</div>
+<div class="form-group">
+    <label class="col-sm-2 text-right">Mobile No:</label>
+    <div class="col-sm-3"><input name="mobileNo" type="text" class="form-control" /></div>
+</div>
+
+<div class="page-header">
+    <strong>Company Address</strong>
+</div>
+
+<div class="form-group">
+    <label class="col-sm-2 text-right">Address 1:</label>
+    <div class="col-sm-8"><input name="address1" type="text" class="form-control" /></div>
+</div>
+<div class="form-group">
+    <label class="col-sm-2 text-right">Address 2:</label>
+    <div class="col-sm-8"><input name="address2" type="text" class="form-control" /></div>
+</div>
+<div class="form-group">
+    <label class="col-sm-2 text-right">City:</label>
+    <div class="col-sm-3"><input name="city" type="text" class="form-control" /></div>
+    <label class="col-sm-2 text-right">Postal Code:</label>
+    <div class="col-sm-3"><input name="postalCode" type="text" class="form-control" /></div>
+</div>
